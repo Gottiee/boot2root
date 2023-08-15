@@ -4,15 +4,18 @@
 
 Scan lan network:
 
-nmap -sn 192.168.1.0/24
+```bash
+$> nmap -sn 192.168.1.0/24
 Nmap scan report for BornToSecHackMe (192.168.1.119)
 Host is up (0.00076s latency).
+```
 
 ## Scan with nmap
 
 To determine if ssh is running and the ssh port, I can run nmap on the ip address:
 
-nmap 192.168.1.119 -sV -sC -v
+```bash
+$> nmap 192.168.1.119 -sV -sC -v
 
 PORT    STATE SERVICE    VERSION
 21/tcp  open  ftp        vsftpd 2.0.8 or later
@@ -48,13 +51,16 @@ PORT    STATE SERVICE    VERSION
 993/tcp open  ssl/imaps?
 |_ssl-date: 2023-08-12T12:57:53+00:00; +8s from scanner time.
 Service Info: Host: 127.0.1.1; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+```
 
 ### FTP:21
 
 Don't find any exploit.
 
+```bash
 Anonymous connection closed:
 |_ftp-anon: got code 500 "OOPS: vsftpd: refusing to run with writable root inside chroot()".
+```
 
 - [Good exploit of ftp](https://medium.com/@kubotortech/pentesting-exploiting-ftp-cba8ec81968e)
 
