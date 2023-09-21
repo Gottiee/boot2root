@@ -15,7 +15,7 @@ Host is up (0.00076s latency).
 To determine if ssh is running and the ssh port, I can run nmap on the ip address:
 
 ```bash
-$> nmap 192.168.1.119 -sV -sC -v
+$> nmap 192.168.1.120 -sV -sC -v
 
 PORT    STATE SERVICE    VERSION
 21/tcp  open  ftp        vsftpd 2.0.8 or later
