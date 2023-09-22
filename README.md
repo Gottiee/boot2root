@@ -6,7 +6,7 @@ Scan lan network:
 
 ```bash
 $> nmap -sn 192.168.1.0/24
-Nmap scan report for BornToSecHackMe (192.168.1.119)
+Nmap scan report for BornToSecHackMe (192.168.1.120)
 Host is up (0.00076s latency).
 ```
 
