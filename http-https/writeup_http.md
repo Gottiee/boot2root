@@ -4,12 +4,12 @@
 
 ```bash
 80/tcp  open  http       Apache httpd 2.2.22 ((Ubuntu))
-| http-methods:
+| http-methods: 
 |_  Supported Methods: OPTIONS GET HEAD POST
 |_http-server-header: Apache/2.2.22 (Ubuntu)
 |_http-title: Hack me if you can
 443/tcp open  ssl/http   Apache httpd 2.2.22
-| http-methods:
+| http-methods: 
 |_  Supported Methods: POST OPTIONS GET HEAD
 |_http-server-header: Apache/2.2.22 (Ubuntu)
 |_http-title: 404 Not Found
@@ -31,11 +31,11 @@
 use auxiliary/scanner/http/dir_scanner
 run
 [*] Detecting error code
-[*] Using code '404' as not found for 192.168.1.139
-[+] Found http://192.168.1.139:80/cgi-bin/ 404 (192.168.1.139)
-[+] Found http://192.168.1.139:80/doc/ 404 (192.168.1.139)
-[+] Found http://192.168.1.139:80/forum/ 404 (192.168.1.139)
-[+] Found http://192.168.1.139:80/icons/ 404 (192.168.1.139)
+[*] Using code '404' as not found for 192.168.1.120
+[+] Found http://192.168.1.120:80/cgi-bin/ 404 (192.168.1.120)
+[+] Found http://192.168.1.120:80/doc/ 404 (192.168.1.120)
+[+] Found http://192.168.1.120:80/forum/ 404 (192.168.1.120)
+[+] Found http://192.168.1.120:80/icons/ 404 (192.168.1.120)
 [*] Scanned 1 of 1 hosts (100% complete)
 [*] Auxiliary module execution completed
 ```
@@ -47,17 +47,17 @@ We found 4 directories, but we can't access them : 403 forbidden.
 http page return 403 forbidden so i try with https:443
 
 ```bash
-dirb https://192.168.1.139:443
+dirb https://192.168.1.120:443
 ```
 
-Most interesting result are:
+Most interesting result are: 
 
 ```bash
-+ https://192.168.1.139:443/cgi-bin/ (CODE:403|SIZE:290)
-==> DIRECTORY: https://192.168.1.139:443/forum/
-==> DIRECTORY: https://192.168.1.139:443/phpmyadmin/
-+ https://192.168.1.139:443/server-status (CODE:403|SIZE:295)
-==> DIRECTORY: https://192.168.1.139:443/webmail/
++ https://192.168.1.120:443/cgi-bin/ (CODE:403|SIZE:290) 
+==> DIRECTORY: https://192.168.1.120:443/forum/
+==> DIRECTORY: https://192.168.1.120:443/phpmyadmin/   
++ https://192.168.1.120:443/server-status (CODE:403|SIZE:295) 
+==> DIRECTORY: https://192.168.1.120:443/webmail/
 ```
 
 There is 5 directory to exploit.

